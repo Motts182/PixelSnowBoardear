@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class Parallax : MonoBehaviour {
-    float speed = 0.008f;
+    public float speed;
     float pos = 0;
     Renderer rend;
 

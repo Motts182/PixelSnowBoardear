@@ -5,16 +5,17 @@ public class Player : MonoBehaviour {
      
     Rigidbody2D rb2d;
     public bool ground;
+    public float JumpForce;
     
     void Awake() {
         rb2d = GetComponent<Rigidbody2D>();
     }
 
-    void Update() {
+    void FixedUpdate() {
 
         if (Input.GetButtonDown("Fire1") && ground)
         {
-            rb2d.AddForce(Vector2.up * 5 , ForceMode2D.Impulse);
+            rb2d.AddForce(Vector2.up * JumpForce, ForceMode2D.Impulse);
         }
     }
 
