@@ -10,8 +10,9 @@ public class EnemiGenerator : MonoBehaviour {
     }
 
      IEnumerator CreateEnemis (){
-         yield return new WaitForSeconds(1f);
-         Instantiate(enemis[0]);
+         yield return new WaitForSeconds(Random.Range(1, 4));
+         var pepe = Instantiate(enemis[Random.Range(0,2)]);
+         pepe.transform.position = transform.position;
          yield return null;
          FirstCall();
     }

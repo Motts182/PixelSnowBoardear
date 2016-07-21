@@ -16,8 +16,6 @@ public class Parallax : MonoBehaviour {
          if (pos > 1.0f)
             pos -= 1.0f;
 
-        print(pos);
-
         rend.material.mainTextureOffset = new Vector2(pos, 0);
     }
 }
